@@ -1,0 +1,33 @@
+{
+  "name": "proprietario",
+  "plural": "proprietarios",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "telefone": {
+      "type": "string",
+      "required": true
+    },
+    "endereco": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "imovels": {
+      "type": "hasMany",
+      "model": "imovel",
+      "foreignKey": "fk_proprietario_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

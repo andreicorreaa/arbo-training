@@ -1,0 +1,29 @@
+{
+  "name": "imovel",
+  "plural": "imoveis",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "endereco": {
+      "type": "string",
+      "required": true
+    },
+    "valor": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "proprietario": {
+      "type": "belongsTo",
+      "model": "proprietario",
+      "foreignKey": "fk_proprietario_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
